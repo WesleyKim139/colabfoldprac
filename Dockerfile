@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y wget cuda-nvcc-$(echo $CUDA_VERSION | c
 ENV PATH /usr/local/envs/colabfold/bin:$PATH
 ENV MPLBACKEND Agg
 
-VOLUME cache
+RUN mkdir -p /cache
 ENV MPLCONFIGDIR /cache
 ENV XDG_CACHE_HOME /cache
